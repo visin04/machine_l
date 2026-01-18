@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Camera Feed - Helmet & License Plate Detection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        header {
+            width: 100%;
+            padding: 20px 0;
+            background: rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        h2 {
+            margin-top: 40px;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+
+        .card {
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(8px);
+            width: 90%;
+            max-width: 800px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        img {
+            width: 100%;
+            max-width: 700px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 30px;
+            font-size: 1rem;
+            color: white;
+            background: linear-gradient(135deg, #ff512f, #dd2476);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #dd2476, #ff512f);
+            transform: translateY(-3px);
+        }
+
+        footer {
+            width: 100%;
+            padding: 20px 0;
+            background: rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: #5b86e5;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #36d1dc;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            footer p {
+                font-size: 0.9rem;
+            }
+
+            img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Live Camera Feed</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h2>Real-Time Helmet & License Plate Detection</h2>
+
+        <div class="card">
+            <!-- Placeholder for live feed -->
+            <img src="/live_feed" alt="Live Camera Feed">
+
+            <!-- Stop Button -->
+            <form action="/stop_feed" method="post">
+                <button type="submit">Stop Live Feed</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Helmet & License Plate Detection. All rights reserved.</p>
+        <p>Contact us: <a href="mailto:vishnuvr22001@gmail.com">vishnuvr22001@gmail.com</a></p>
+        <p>Phone: +91 98765 43210</p>
+        <p>Connect on <a href="https://www.linkedin.com/in/hariharan-e" target="_blank">LinkedIn</a> | <a href="https://github.com/vishnuvr22" target="_blank">GitHub</a></p>
+    </footer>
+
+</body>
+
+</html>
